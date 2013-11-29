@@ -1,6 +1,5 @@
 package edu.concordia.dpis.messenger;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -11,11 +10,11 @@ import java.util.Arrays;
 import edu.concordia.dpis.commons.Message;
 import edu.concordia.dpis.commons.UDPMessage;
 
-public class UDPClient {
+public class UDPClient implements Imessenger{
 
 	// private static Logger log = Logger.getLogger(UDPClient.class.getName());
 
-	public Message send(Message msg) throws FileNotFoundException, IOException {
+	public Message send(Message msg) {
 		String response = null;
 		DatagramSocket aSocket = null;
 		try {
